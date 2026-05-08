@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="../styles/contact.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/services.css">
+    <link rel="stylesheet" href="../styles/course.css">
+    <link rel="stylesheet" href="../styles/documents.css">
+    <link rel="stylesheet" href="../styles/expert.css">
+    <link rel="stylesheet" href="../styles/testimonials.css">
+    <link rel="stylesheet" href="../styles/hero.css">
+    <link rel="stylesheet" href="../styles/stats.css">
 
     <!-- jQuery CDN (dùng để load component) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -21,6 +28,111 @@
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
+    <!-- Service Section -->
+    <section class="services_course">
+        <div class="container-xxl px-4">
+
+            <!-- Tiêu đề services section -->
+            <div class="services-header">
+                <p class="services-tagline">Chất lượng và tận tâm</p>
+                <h2 class="services-title">Dịch vụ của chúng tôi</h2>
+                <p class="services-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temporincididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrue
+                </p>
+            </div>
+
+            <img src="assets/checkeredshape.svg" alt="" class="checkeredshape">
+            <img src="assets/Ellipse2.svg" alt="" class="ellipse2">
+            <div class="ellipse4"></div>
+
+            <!-- Lưới 6 dịch vụ -->
+            <div class="services-grid">
+
+                <!-- Dịch vụ 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="assets/head.svg" class="service-icon" alt="Head">
+                    </div>
+                    <div class="service-info">
+                        <h3 class="service-name">Chiến lược kinh doanh</h3>
+                        <p class="service-text">Lorem ipsum dolor amet ex consectetur adipiscing elit sed eiusmod
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dịch vụ 2 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="assets/hand.svg" class="service-icon" alt="Hand">
+                    </div>
+                    <div class="service-info">
+                        <h3 class="service-name">Quản lý dự án</h3>
+                        <p class="service-text">Lorem ipsum dolor amet ex consectetur adipiscing elit sed eiusmod
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dịch vụ 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="assets/group.svg" class="service-icon" alt="Group">
+                    </div>
+                    <div class="service-info">
+                        <h3 class="service-name">Quản trị nhân lực</h3>
+                        <p class="service-text">Lorem ipsum dolor amet ex consectetur adipiscing elit sed eiusmod
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dịch vụ 4 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="assets/head.svg" class="service-icon" alt="Head">
+                    </div>
+                    <div class="service-info">
+                        <h3 class="service-name">Chiến lược kinh doanh</h3>
+                        <p class="service-text">Lorem ipsum dolor amet ex consectetur adipiscing elit sed eiusmod
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dịch vụ 5 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="assets/hand.svg" class="service-icon" alt="Hand">
+                    </div>
+                    <div class="service-info">
+                        <h3 class="service-name">Quản lý dự án</h3>
+                        <p class="service-text">Lorem ipsum dolor amet ex consectetur adipiscing elit sed eiusmod
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dịch vụ 6 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="assets/group.svg" class="service-icon" alt="Group">
+                    </div>
+                    <div class="service-info">
+                        <h3 class="service-name">Quản trị nhân lực</h3>
+                        <p class="service-text">Lorem ipsum dolor amet ex consectetur adipiscing elit sed eiusmod
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <img src="assets/Rectangle3.svg" alt="" class="rectangle3">
+
+            <!-- Nút CTA -->
+            <div class="services-cta">
+                <a href="#" class="services-btn">
+                    Khám phá ngay
+                    <img src="assets/arrow-right.svg" alt="">
+                </a>
+            </div>
+    </section>
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
@@ -39,7 +151,7 @@
         $(function () {
             // Sau khi navbar load xong, gọi initNavbar() để set active state
             $("#navbar-placeholder").load("../compoments/navbar.html nav", function () {
-                if(typeof initNavbar === 'function') {
+                if (typeof initNavbar === 'function') {
                     initNavbar();
                 }
             });
