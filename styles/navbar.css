@@ -85,13 +85,19 @@
 }
 
 .icons-group {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 16px;
-    border: 1px solid #E0E0E0;
-    border-radius: 22px;
+    gap: 17px;
+    border: 1px solid #C7C7C7;
+    border-radius: 30px;
     padding: 8px 16px;
     height: 44px;
+}
+
+.divider {
+    width: 1px;
+    height: 42px;
+    background-color: #C7C7C7;
 }
 
 .icon-wrapper {
@@ -101,7 +107,7 @@
 
 .cart-badge {
     position: absolute;
-    top: -8px;
+    top: -15px;
     right: -8px;
     background-color: var(--badge-bg);
     color: white;
