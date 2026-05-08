@@ -9,6 +9,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.nav-item {
+    padding-left: 10px;
+}
+
 /* Logo */
 .navbar-brand.nav-logo {
     display: flex;
@@ -64,21 +68,42 @@
 .navbar-nav .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -10px;    /* Nằm sát đáy navbar (navbar cao 80px) */
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
 
-    /* Rộng hơn text một chút để trông tự nhiên, tối thiểu 80px.
-       Đây là điểm khác biệt với SVG cố định 92px:
-       text ngắn → indicator nhỏ, text dài → indicator lớn hơn */
-    width: calc(100% + 16px);
+    width: 100%;
     min-width: 80px;
-    height: 2px;    /* Khớp với chiều cao SVG gốc trong Figma */
+    height: 2px;
 
     background-color: var(--primary-color);
 
     /* Animation slide-in khi xuất hiện */
     animation: nav-indicator-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Polygon1.svg — tam giác trỏ xuống, đặt giữa phía trên đường line */
+.navbar-nav .nav-link.active::before {
+    content: '';
+    position: absolute;
+    /* Đáy tam giác chạm vào top của line.
+       Line bottom: -10px, line height: 2px → line top: -8px từ nav-link bottom.
+       Polygon cao 6px → bottom của polygon đặt tại -4px để căn trực quan */
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 14px;  /* Khớp viewBox của Polygon1.svg */
+    height: 6px;
+
+    background-image: url('../assets/Polygon1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    /* Drop-in nhẹ, delay 0.1s để xuất hiện sau đường line */
+    animation: nav-polygon-in 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
+    z-index: 1;
 }
 
 @keyframes nav-indicator-in {
@@ -89,6 +114,17 @@
     to {
         width: calc(100% + 16px);
         opacity: 1;
+    }
+}
+
+@keyframes nav-polygon-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
     }
 }
 
@@ -165,7 +201,8 @@
     }
 
     /* Ẩn active indicator khi menu đang dạng collapse */
-    .navbar-nav .nav-link.active::after {
+    .navbar-nav .nav-link.active::after,
+    .navbar-nav .nav-link.active::before {
         display: none;
     }
 
