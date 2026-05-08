@@ -2,9 +2,9 @@
    Services Section — Dịch vụ của chúng tôi
    ============================================= */
 
-.services {
+.services_course {
     position: relative;
-    padding: 80px 0;
+    padding: 98px 0;
     background-color: var(--white);
     overflow: hidden;
 }
@@ -119,9 +119,9 @@
 .services-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     padding: 16px 32px;
-    background: linear-gradient(-90deg, #ff9500 0%, #ffac39 100%);
+    background: linear-gradient(#FF9500, #FFAC39);
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -141,6 +141,12 @@
 .services-btn img {
     width: 20px;
     height: 20px;
+}
+
+.course-header{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 /* === Responsive === */
