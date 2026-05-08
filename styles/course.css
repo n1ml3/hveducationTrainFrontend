@@ -1,0 +1,226 @@
+/* =============================================
+   Course Section — Khoá học phổ biến
+   ============================================= */
+
+/* --- Container cuộn ngang cho danh sách thẻ khoá học --- */
+.course-list {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+
+    /* Ẩn scrollbar nhưng vẫn cho cuộn */
+    scrollbar-width: none;            /* Firefox */
+    -ms-overflow-style: none;         /* IE / Edge */
+}
+
+.course-list::-webkit-scrollbar {
+    display: none;                    /* Chrome / Safari */
+}
+
+/* --- Thẻ khoá học --- */
+.course-card {
+    flex: 0 0 calc(25% - 18px);      /* 4 thẻ mỗi hàng, trừ gap */
+    min-width: 280px;
+    scroll-snap-align: start;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--white);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.course-card:hover {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+/* --- Khu vực ảnh thumbnail --- */
+.course-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.course-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Badge giá nằm đè lên ảnh, góc dưới-trái --- */
+.course-price-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #013475;
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 0 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.course-price-old {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: line-through;
+    line-height: 1;
+}
+
+.course-price-new {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+/* --- Nội dung bên dưới ảnh --- */
+.course-body {
+    padding: 16px 4px 8px;
+}
+
+/* Hàng meta: số bài học, hình thức học */
+.course-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.course-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* Chấm tròn icon placeholder cho meta */
+.course-meta-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.course-meta-dot--orange {
+    background-color: #ff9500;
+}
+
+.course-meta-dot--gray {
+    background-color: #999;
+}
+
+.course-meta-item img {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Tên khoá học */
+.course-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    line-height: 24px;
+    margin: 0;
+
+    /* Giới hạn 2 dòng */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- Nút CTA "Xem thêm" với viền outline --- */
+.course-cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.course-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: transparent;
+    color: #013475;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    border: 2px solid #013475;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.course-btn:hover {
+    background-color: #013475;
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.course-btn img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+/* Hover đổi màu icon sang trắng */
+.course-btn:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* --- Slider wrapper — chỉ giữ position relative cho layout --- */
+.course-slider {
+    position: relative;
+}
+
+/* Con trỏ grab khi kéo chuột cuộn danh sách */
+.course-list {
+    cursor: grab;
+}
+
+.course-list.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;      /* Tắt snap khi đang kéo để mượt hơn */
+}
+
+/* Không cho hover effect khi đang kéo — tránh rung */
+.course-list.is-dragging .course-card {
+    pointer-events: none;
+}
+
+/* === Responsive === */
+
+/* Tablet — 2.5 thẻ visible, gợi ý cuộn */
+@media (max-width: 991px) {
+    .course-card {
+        flex: 0 0 calc(50% - 12px);
+        min-width: 260px;
+    }
+}
+
+/* Mobile — 1 thẻ + peek */
+@media (max-width: 575.98px) {
+    .course-card {
+        flex: 0 0 85%;
+        min-width: 240px;
+    }
+
+    .course-price-new {
+        font-size: 16px;
+    }
+
+    .course-name {
+        font-size: 15px;
+    }
+}
