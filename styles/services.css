@@ -52,20 +52,25 @@
 
 /* --- Lưới các thẻ dịch vụ --- */
 .services-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
+    z-index: 2;
 }
 
 /* Mỗi thẻ dịch vụ */
 .service-card {
+    position: relative;
     display: flex;
     align-items: flex-start;
     gap: 16px;
     padding: 28px 24px;
     border-radius: 12px;
+    background-color: var(--white);
     box-shadow: 0 0 24px 8px rgba(229, 241, 255, 0.42);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 1;
 }
 
 .service-card:hover {
@@ -149,6 +154,43 @@
     margin-bottom: 40px;
 }
 
+.rectangle3 {
+    position: absolute;
+    top: 500px;
+    left: 850px;
+    width: 50%;
+    height: 50%;
+    z-index: 0;
+}
+
+.checkeredshape {
+    position: absolute;
+    top: 55px;
+    right: 33px;
+    width: 183px;
+    height: 183px;
+    z-index: 0;
+}
+
+.ellipse2 {
+    position: absolute;
+    top: 204px;
+    right: 160px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+}
+
+.ellipse4 {
+    border-radius: 50%;
+    border: 1px solid #DBDBDB;
+    position: absolute;
+    top: 0px;
+    left: 1420px;
+    width: 348px;
+    height: 348px;
+    z-index: 2;
+}
 /* === Responsive === */
 
 /* Tablet — 2 cột */
