@@ -1,0 +1,124 @@
+/* Documents Section */
+.documents {
+    background-color: #eef6ff;
+    position: relative;
+    padding: 52px 0;
+    overflow: hidden;
+}
+
+.documents-bg-shape {
+    position: absolute;
+    top: -171px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1569px;
+    height: 1046px;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.documents .container-xxl {
+    position: relative;
+    z-index: 1;
+}
+
+.documents-header {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.documents-tagline {
+    color: #FF9500;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.documents-title {
+    color: #013475;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.documents-title::after {
+    content: '';
+    display: block;
+    width: 141px;
+    height: 3px;
+    background-color: #FF9500;
+    margin: 16px auto 0;
+}
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.document-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.document-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.document-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.document-name {
+    color: #013475;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.document-text {
+    color: #161616;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+}
+
+.document-price {
+    color: #ff9500;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 991px) {
+    .documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .documents-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .documents-title {
+        font-size: 32px;
+    }
+}
