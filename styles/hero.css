@@ -10,7 +10,7 @@
 
 .hero-bg-shape {
     position: absolute;
-    right: -100px;
+    right: 0px;
     top: 0;
     height: 100%;
     width: auto;
@@ -20,18 +20,23 @@
 
 .hero-person {
     position: absolute;
-    right: 80px;
+    right: 50px;
     bottom: 0;
-    height: 120%; /* Scale up slightly as in Figma */
+    height: 100%; /* Scale up slightly as in Figma */
     z-index: 2;
     pointer-events: none;
+}
+
+.hero-dot1 {
+    position: absolute;
+    z-index: 2;
+    right: 500px;
 }
 
 .hero-content {
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 80px;
     position: relative;
     z-index: 3;
 }
