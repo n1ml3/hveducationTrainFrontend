@@ -1,0 +1,184 @@
+/* =============================================
+   Services Section — Dịch vụ của chúng tôi
+   ============================================= */
+
+.services {
+    position: relative;
+    padding: 80px 0;
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+/* --- Header khu vực tiêu đề --- */
+.services-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-tagline {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Inter';
+    color: #ff9500;
+    margin-bottom: 16px;
+}
+
+.services-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #013475;
+    margin-bottom: 16px;
+    font-family: 'Inter';
+    line-height: 40px;
+}
+
+/* Gạch ngang trang trí dưới tiêu đề */
+.services-title::after {
+    content: '';
+    display: block;
+    width: 141px;
+    height: 3px;
+    background-color: #FF9500;
+    margin: 16px auto 0;
+}
+
+.services-description {
+    font-size: 16px;
+    line-height: 28px;
+    color: #262626;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* --- Lưới các thẻ dịch vụ --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Mỗi thẻ dịch vụ */
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 28px 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 24px 8px rgba(229, 241, 255, 0.42);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Placeholder cho icon — người dùng sẽ tự thêm icon sau */
+.service-icon-wrapper {
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF6FF;
+    border-radius: 50%;
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Nội dung text trong thẻ */
+.service-info {
+    flex: 1;
+}
+
+.service-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #013475;
+    margin-bottom: 8px;
+    font-family: 'Inter';
+}
+
+.service-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #161616;
+    font-family: 'Inter';
+}
+
+/* --- Nút CTA --- */
+.services-cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.services-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: linear-gradient(-90deg, #ff9500 0%, #ffac39 100%);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+    color: white;
+}
+
+.services-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* === Responsive === */
+
+/* Tablet — 2 cột */
+@media (max-width: 991px) {
+    .services {
+        padding: 60px 0;
+    }
+
+    .services-title {
+        font-size: 34px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile — 1 cột */
+@media (max-width: 575.98px) {
+    .services {
+        padding: 40px 0;
+    }
+
+    .services-title {
+        font-size: 28px;
+    }
+
+    .services-tagline {
+        font-size: 16px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 20px 16px;
+    }
+}
