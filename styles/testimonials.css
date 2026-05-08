@@ -54,7 +54,8 @@
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 24px;
-    line-height: 1.2;
+    line-height: 50px;
+    width: 504px;
 }
 
 .testimonials-title::after {
@@ -88,13 +89,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonials-nav-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .testimonials-nav-btn img {
@@ -105,7 +103,7 @@
 .testimonials-cards {
     flex: 2;
     display: flex;
-    gap: 30px;
+    gap: 27px;
 }
 
 .testimonial-item {
