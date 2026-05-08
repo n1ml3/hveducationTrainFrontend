@@ -110,6 +110,10 @@
     height: 20px;
 }
 
+.input-group {
+    gap: 8px;
+}
+
 /* Social links */
 .social-links {
     display: flex;

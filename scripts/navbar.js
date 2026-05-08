@@ -16,6 +16,7 @@ const PAGE_MAP = {
     '/':              0,  // Trang chủ
     '/index.html':    0,  // Trang chủ (đường dẫn đầy đủ)
     '/about.html':    1,  // Giới thiệu
+    '/introduce.html':1,  // Giới thiệu
     '/courses.html':  2,  // Khoá học
     '/materials.html':3,  // Tài liệu học
     '/blog.html':     4,  // Blog
@@ -65,6 +66,13 @@ function initNavbar() {
     const navLinks = document.querySelectorAll('#navbar-placeholder .nav-link');
 
     if (navLinks.length === 0) return;
+
+    // Cập nhật href động để dùng được cả ở trang ngoài lẫn trang trong /pages/
+    const inPagesDir = window.location.pathname.includes('/pages/');
+    const prefix = inPagesDir ? '../' : './';
+    
+    if (navLinks[0]) navLinks[0].href = prefix + 'index.html';
+    if (navLinks[1]) navLinks[1].href = prefix + 'pages/introduce.html';
 
     // Bước 1: Set active dựa trên URL hiện tại
     const activeIndex = getActiveIndexFromUrl(window.location.pathname);
