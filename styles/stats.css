@@ -1,15 +1,15 @@
 /* =============================================
-   Stats Section - Thanh thống kê
+   Stats Section — Brand styles, Bootstrap lo layout
    ============================================= */
 
 .stats {
     position: relative;
     background-color: #316ce2;
     overflow: hidden;
-    padding: 62px 80px;
+    padding: 62px 0;
 }
 
-/* Lớp overlay nền với hình ảnh blend */
+/* Overlay hình ảnh nền với hiệu ứng blend */
 .stats-bg-overlay {
     position: absolute;
     inset: 0;
@@ -22,25 +22,10 @@
     z-index: 0;
 }
 
-.stats-container {
-    position: relative;
-    z-index: 1;
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
 /* Mỗi cột số liệu thống kê */
 .stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
     color: white;
-    text-align: center;
-    flex: 1;
+    padding: 8px 16px;
 }
 
 .stat-number {
@@ -48,7 +33,7 @@
     font-weight: 700;
     line-height: 1;
     color: white;
-    margin: 0;
+    margin-bottom: 16px;
 }
 
 .stat-label {
@@ -59,15 +44,14 @@
     white-space: nowrap;
 }
 
-/* Phần text in đậm trong label */
 .stat-label strong {
     font-weight: 600;
 }
 
-/* Đường kẻ dọc ngăn cách giữa các cột */
+/* Đường kẻ dọc ngăn cách — gradient mờ dần ở hai đầu */
 .stat-divider {
     width: 1px;
-    height: 218px;
+    height: 80px;
     background: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0) 0%,
@@ -78,34 +62,7 @@
 }
 
 /* Responsive */
-@media (max-width: 991px) {
-    .stats {
-        padding: 48px 40px;
-    }
-
-    .stats-container {
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-
-    .stat-divider {
-        display: none;
-    }
-
-    .stat-item {
-        flex: 1 1 40%;
-    }
-}
-
-@media (max-width: 576px) {
-    .stats {
-        padding: 40px 24px;
-    }
-
-    .stat-item {
-        flex: 1 1 100%;
-    }
-
+@media (max-width: 575.98px) {
     .stat-number {
         font-size: 28px;
     }

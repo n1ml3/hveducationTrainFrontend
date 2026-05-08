@@ -1,19 +1,20 @@
+/* =============================================
+   Navbar — Override Bootstrap, giữ brand styles
+   ============================================= */
+
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0 80px;
     height: var(--nav-height);
-    background-color: var(--white);
+    background-color: var(--white) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 1000;
 }
 
-.nav-logo {
+/* Logo */
+.navbar-brand.nav-logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
 }
 
 .logo-icon {
@@ -39,36 +40,28 @@
     font-weight: 400;
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    position: absolute;
-    left: 360px;
-}
-
-.nav-item {
+/* Nav links */
+.navbar-nav .nav-link {
     font-size: 18px;
     font-weight: 500;
-    color: var(--text-color);
-    cursor: pointer;
+    color: var(--text-color) !important;
+    padding: 0 !important;
     transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 4px;
     position: relative;
 }
 
-.nav-item:hover {
-    color: var(--primary-color);
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--primary-color) !important;
 }
 
-.nav-item.active {
-    color: var(--primary-color);
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
     font-weight: 600;
 }
 
-.nav-item.active::after {
+/* Active underline indicator — chỉ hiện trên desktop */
+.navbar-nav .nav-link.active::after {
     content: '';
     position: absolute;
     bottom: -32px;
@@ -86,10 +79,9 @@
     height: 12px;
 }
 
+/* Right side actions */
 .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+    flex-shrink: 0;
 }
 
 .icons-group {
@@ -133,8 +125,33 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .btn-login:hover {
     background-color: #012a5e;
+}
+
+/* Responsive — mobile/tablet */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 0 24px;
+        height: auto;
+        min-height: 64px;
+    }
+
+    /* Ẩn active indicator khi menu đang dạng collapse */
+    .navbar-nav .nav-link.active::after {
+        display: none;
+    }
+
+    /* Thêm padding cho nav links trong menu collapse */
+    .navbar-nav .nav-link {
+        padding: 10px 0 !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-actions {
+        padding: 12px 0;
+    }
 }

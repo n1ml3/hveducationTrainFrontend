@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../styles/navbar.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/" class="nav-logo">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-xxl px-4">
+
+        <!-- Logo -->
+        <a class="navbar-brand nav-logo" href="/">
             <img src="assets/logo.svg" alt="HVedu Logo" class="logo-icon">
             <div class="logo-text">
                 <span class="logo-title">HVEducation</span>
@@ -17,27 +21,60 @@
             </div>
         </a>
 
-        <ul class="nav-menu">
-            <li class="nav-item active">Trang chủ</li>
-            <li class="nav-item">Giới thiệu</li>
-            <li class="nav-item">
-                Khoá học
-                <img src="assets/arrow.svg" alt="" class="arrow-icon">
-            </li>
-            <li class="nav-item">Tài liệu học</li>
-            <li class="nav-item">Blog</li>
-            <li class="nav-item">Liên hệ</li>
-        </ul>
+        <!-- Hamburger button — hiện trên mobile/tablet -->
+        <button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMain"
+                aria-controls="navbarMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="nav-actions">
-            <div class="icons-group">
-                <div class="icon-wrapper">
-                    <img src="assets/icons.svg" alt="Search and Cart">
-                    <span class="cart-badge">2</span>
+        <!-- Menu có thể collapse -->
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <!-- Nav links — căn giữa -->
+            <ul class="navbar-nav mx-auto gap-lg-4">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-1" href="#">
+                        Khoá học
+                        <img src="assets/arrow-down.svg" alt="" class="arrow-icon">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tài liệu học</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+            </ul>
+
+            <!-- Actions bên phải -->
+            <div class="nav-actions d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                <div class="icons-group">
+                    <div class="icon-wrapper">
+                        <img src="assets/Search.svg" alt="Search">
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="assets/Cart.svg" alt="Cart">
+                        <span class="cart-badge">2</span>
+                    </div>
                 </div>
+                <button class="btn-login">Đăng nhập</button>
             </div>
-            <button class="btn-login">Đăng nhập</button>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
 </body>
 </html>

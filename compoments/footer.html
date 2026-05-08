@@ -1,75 +1,81 @@
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-top">
-            <div class="nav-logo">
-                <img src="assets/logo.svg" alt="HVedu Logo" class="logo-icon">
-                <div class="logo-text">
-                    <span class="logo-title">HVEducation</span>
-                    <span class="logo-subtitle">Online learning solution</span>
-                </div>
-            </div>
-            
-            <div class="footer-columns">
-                <div class="footer-col info">
-                    <h3 class="footer-col-title">HVG Education</h3>
-                    <div class="info-list">
-                        <div class="info-item">
-                            <img src="assets/pin-map.svg" alt="" class="info-icon">
-                            <div class="info-text">
-                                <p><span class="info-label">Địa chỉ:</span> 33 Trung Kính, Cầu Giấy, Hà Nội</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <img src="assets/telephone.svg" alt="" class="info-icon">
-                            <div class="info-text">
-                                <p><span class="info-label">Hotline:</span> (+84)96311800</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <img src="assets/email.svg" alt="" class="info-icon">
-                            <div class="info-text">
-                                <p><span class="info-label">Email:</span> demo1@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-xxl px-4">
 
-                <div class="footer-col links">
-                    <h3 class="footer-col-title">Thông tin</h3>
-                    <div class="links-list">
-                        <a href="#">Trang chủ</a>
-                        <a href="#">Giới thiệu</a>
-                        <a href="#">Khoá học</a>
-                        <a href="#">Tài liệu học</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Liên hệ</a>
-                    </div>
-                </div>
-
-                <div class="footer-col subscribe">
-                    <h3 class="footer-col-title">Kết nối với chúng tôi</h3>
-                    <p class="subscribe-text">Nhận thông tin mới nhất về sản phẩm dịch vụ, kiến thức về mẹ và bé</p>
-                    <div class="subscribe-form">
-                        <div class="input-group">
-                            <input type="email" placeholder="Email của bạn" class="subscribe-input">
-                        </div>
-                        <button type="submit" class="subscribe-btn">
-                            <img src="assets/mail-send.svg" alt="" class="btn-icon">
-                            Gửi
-                        </button>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-item"><img src="assets/facebook.svg" alt="Facebook" class="social-icon"></a>
-                        <a href="#" class="social-item"><img src="assets/youtube.svg" alt="YouTube" class="social-icon"></a>
-                        <a href="#" class="social-item"><img src="assets/linkedin.svg" alt="LinkedIn" class="social-icon"></a>
-                        <a href="#" class="social-item"><img src="assets/twitter.svg" alt="Twitter" class="social-icon"></a>
-                    </div>
-                </div>
+        <!-- Logo -->
+        <div class="d-flex align-items-center gap-3 mb-4 nav-logo">
+            <img src="assets/logo.svg" alt="HVedu Logo" class="logo-icon">
+            <div class="logo-text">
+                <span class="logo-title">HVEducation</span>
+                <span class="logo-subtitle">Online learning solution</span>
             </div>
         </div>
 
+        <!-- 3 cột chính dùng Bootstrap grid -->
+        <div class="row g-5">
+
+            <!-- Cột 1: Thông tin liên hệ -->
+            <div class="col-12 col-md-6 col-lg-5">
+                <h3 class="footer-col-title mb-4">HVG Education</h3>
+                <div class="d-flex flex-column gap-3">
+                    <div class="info-item">
+                        <img src="assets/pin-map.svg" alt="" class="info-icon">
+                        <div class="info-text">
+                            <p><span class="info-label">Địa chỉ:</span> 33 Trung Kính, Cầu Giấy, Hà Nội</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="assets/telephone.svg" alt="" class="info-icon">
+                        <div class="info-text">
+                            <p><span class="info-label">Hotline:</span> (+84)96311800</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="assets/email.svg" alt="" class="info-icon">
+                        <div class="info-text">
+                            <p><span class="info-label">Email:</span> demo1@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cột 2: Liên kết -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <h3 class="footer-col-title mb-4">Thông tin</h3>
+                <div class="footer-links">
+                    <a href="#">Trang chủ</a>
+                    <a href="#">Giới thiệu</a>
+                    <a href="#">Khoá học</a>
+                    <a href="#">Tài liệu học</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Liên hệ</a>
+                </div>
+            </div>
+
+            <!-- Cột 3: Đăng ký & Mạng xã hội -->
+            <div class="col-12 col-md-6 col-lg-5">
+                <h3 class="footer-col-title mb-3">Kết nối với chúng tôi</h3>
+                <p class="subscribe-text mb-3">Nhận thông tin mới nhất về sản phẩm dịch vụ, kiến thức về mẹ và bé</p>
+                <div class="input-group mb-4">
+                    <input type="email" placeholder="Email của bạn" class="form-control subscribe-input">
+                    <button type="submit" class="subscribe-btn d-flex align-items-center gap-2">
+                        <img src="assets/mail-send.svg" alt="" class="btn-icon">
+                        Gửi
+                    </button>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-item"><img src="assets/facebook.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="#" class="social-item"><img src="assets/youtube.svg" alt="YouTube" class="social-icon"></a>
+                    <a href="#" class="social-item"><img src="assets/linkedin.svg" alt="LinkedIn" class="social-icon"></a>
+                    <a href="#" class="social-item"><img src="assets/twitter.svg" alt="Twitter" class="social-icon"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
         <div class="footer-bottom">
             <p class="copyright">© 2025 HVG.All Rights Reserved.</p>
         </div>
+
     </div>
 </footer>

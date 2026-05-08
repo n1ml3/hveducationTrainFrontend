@@ -1,46 +1,12 @@
+/* =============================================
+   Footer — Brand styles, Bootstrap lo layout
+   ============================================= */
+
 .footer {
     background-color: #f0f7ff;
-    padding: 60px 80px 40px;
+    padding: 60px 0 0;
     color: #262626;
     font-family: var(--font-family);
-}
-
-.footer-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.footer-top {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-columns {
-    display: flex;
-    gap: 128px;
-    align-items: flex-start;
-}
-
-.footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.footer-col.info {
-    width: 433px;
-}
-
-.footer-col.links {
-    width: 111px;
-}
-
-.footer-col.subscribe {
-    width: 368px;
 }
 
 .footer-col-title {
@@ -49,12 +15,7 @@
     color: #0056b3;
 }
 
-.info-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* Info items */
 .info-item {
     display: flex;
     gap: 12px;
@@ -65,6 +26,7 @@
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .info-text p {
@@ -77,48 +39,40 @@
     font-weight: 700;
 }
 
-.links-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.links-list a {
+/* Navigation links */
+.footer-links a {
+    display: block;
     font-size: 16px;
     color: #262626;
+    text-decoration: none;
+    margin-bottom: 20px;
     transition: color 0.3s ease;
 }
 
-.links-list a:hover {
+.footer-links a:hover {
     color: #0056b3;
 }
 
+/* Subscribe */
 .subscribe-text {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 12px;
 }
 
-.subscribe-form {
-    display: flex;
-    gap: 8px;
-}
-
-.input-group {
-    position: relative;
-    flex-grow: 1;
-}
-
+/* Override Bootstrap input-group styles */
 .subscribe-input {
-    width: 100%;
     height: 44px;
-    padding: 0 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    border: 1px solid rgba(38, 38, 38, 0.15);
+    border-radius: 4px !important;
     background-color: white;
     font-size: 14px;
     font-style: italic;
     outline: none;
+}
+
+.subscribe-input:focus {
+    box-shadow: none;
+    border-color: #0056b3;
 }
 
 .subscribe-btn {
@@ -127,13 +81,10 @@
     background-color: #0056b3;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px !important;
     font-size: 14px;
     font-weight: 800;
     text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 8px;
     cursor: pointer;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
@@ -141,17 +92,18 @@
 
 .subscribe-btn:hover {
     background-color: #004494;
+    color: white;
 }
 
 .btn-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
+/* Social links */
 .social-links {
     display: flex;
     gap: 16px;
-    margin-top: 24px;
 }
 
 .social-item {
@@ -163,6 +115,7 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .social-item:hover {
@@ -174,13 +127,16 @@
     height: 18px;
 }
 
+/* Footer bottom copyright bar */
 .footer-bottom {
+    margin-top: 40px;
     border-top: 1px solid rgba(38, 38, 38, 0.12);
-    padding-top: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
 .copyright {
     font-size: 16px;
     color: rgba(38, 38, 38, 0.4);
+    margin: 0;
 }
