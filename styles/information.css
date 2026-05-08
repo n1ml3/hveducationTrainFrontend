@@ -1,0 +1,141 @@
+/* Information Section */
+.info-section {
+    padding: 80px 0;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.info-decor {
+    position: absolute;
+    left: 26px;
+    top: 116px;
+    z-index: 0;
+}
+
+.info-section .container-xxl {
+    position: relative;
+    z-index: 1;
+}
+
+.info-header {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-tagline {
+    color: #FF9500;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.info-title {
+    color: #013475;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.info-title-line {
+    width: 141px;
+    height: 3px;
+    background-color: #FF9500;
+    margin: 0 auto;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.info-card-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.info-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.info-card-title {
+    color: #333333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.info-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: #013475;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-meta-item img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.info-meta-divider {
+    color: #013475;
+}
+
+.info-card-desc {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-title {
+        font-size: 32px;
+    }
+}

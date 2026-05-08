@@ -1,7 +1,3 @@
-/* =============================================
-   Navbar — Override Bootstrap, giữ brand styles
-   ============================================= */
-
 .navbar {
     padding: 0 80px;
     height: var(--nav-height);
