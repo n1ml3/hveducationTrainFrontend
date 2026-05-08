@@ -6,43 +6,81 @@
     <title>HVedu - Online learning solution</title>
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/stats.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-logo">
-            <img src="assets/logo.svg" alt="HVedu Logo" class="logo-icon">
-            <div class="logo-text">
-                <span class="logo-title">HVEducation</span>
-                <span class="logo-subtitle">Online learning solution</span>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <img src="assets/hero-bg-shape.png" alt="" class="hero-bg-shape">
+            <img src="assets/hero-person.png" alt="Hero Person" class="hero-person">
+            
+            <div class="hero-content">
+                <p class="hero-tagline">Đầu tư cho tương lai của bạn</p>
+                <h1 class="hero-title">
+                    Thực chiến - Toàn diện Training & Coaching <br>
+                    for <span>Business Development</span>
+                </h1>
+                <p class="hero-description">
+                    Thành Công trong kinh doanh không chỉ đến từ nhiệt huyết và giỏi nghề. 
+                    Thành Công phải được đánh đổi bằng sự Đầu tư, Kiến thức, Kiên trì, 
+                    Kỷ luật cao và kể cả Thất bại. Chúng tôi CAM KẾT mang lại Kết quả 
+                    cao gấp 10 lần sự Đầu tư của Công ty bạn.
+                </p>
+                <a href="#" class="hero-btn">
+                    Khám phá ngay
+                    <img src="assets/arrow-right-white.svg" alt="">
+                </a>
             </div>
-        </div>
+        </section>
 
-        <ul class="nav-menu">
-            <li class="nav-item active">Trang chủ</li>
-            <li class="nav-item">Giới thiệu</li>
-            <li class="nav-item">
-                Khoá học
-                <img src="assets/arrow.svg" alt="" class="arrow-icon">
-            </li>
-            <li class="nav-item">Tài liệu học</li>
-            <li class="nav-item">Blog</li>
-            <li class="nav-item">Liên hệ</li>
-        </ul>
+        <!-- Stats Section - Thanh thống kê -->
+        <section class="stats">
+            <div class="stats-bg-overlay"></div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <p class="stat-number">100+</p>
+                    <p class="stat-label"><strong>Giảng viên</strong> chuyên nghiệp</p>
+                </div>
 
-        <div class="nav-actions">
-            <div class="icons-group">
-                <div class="icon-wrapper">
-                    <img src="assets/icons.svg" alt="Search and Cart">
-                    <span class="cart-badge">2</span>
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <p class="stat-number">1.2k</p>
+                    <p class="stat-label"><strong>Khoá học</strong> nhiều lĩnh vực</p>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <p class="stat-number">96%</p>
+                    <p class="stat-label"><strong>Đánh giá</strong> hài lòng</p>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <p class="stat-number">10.5k</p>
+                    <p class="stat-label"><strong>Cộng đồng</strong> học viên</p>
                 </div>
             </div>
-            <button class="btn-login">Đăng nhập</button>
-        </div>
-    </nav>
-
-    <main style="padding: 100px 80px; text-align: center;">
-        <h1 style="font-size: 48px; color: var(--primary-color); margin-bottom: 24px;">Welcome to HVEducation</h1>
-        <p style="font-size: 20px; color: var(--text-color);">Your journey to knowledge starts here.</p>
+        </section>
     </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $(function(){
+            $("#navbar-placeholder").load("compoments/navbar.html nav");
+            $("#footer-placeholder").load("compoments/footer.html");
+        });
+    </script>
 </body>
 </html>

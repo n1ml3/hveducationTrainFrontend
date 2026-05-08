@@ -1,0 +1,116 @@
+/* =============================================
+   Stats Section - Thanh thống kê
+   ============================================= */
+
+.stats {
+    position: relative;
+    background-color: #316ce2;
+    overflow: hidden;
+    padding: 62px 80px;
+}
+
+/* Lớp overlay nền với hình ảnh blend */
+.stats-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/stats-bg.png');
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.stats-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Mỗi cột số liệu thống kê */
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    color: white;
+    text-align: center;
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Phần text in đậm trong label */
+.stat-label strong {
+    font-weight: 600;
+}
+
+/* Đường kẻ dọc ngăn cách giữa các cột */
+.stat-divider {
+    width: 1px;
+    height: 218px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .stats {
+        padding: 48px 40px;
+    }
+
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .stat-item {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats {
+        padding: 40px 24px;
+    }
+
+    .stat-item {
+        flex: 1 1 100%;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-label {
+        font-size: 16px;
+    }
+}
