@@ -120,3 +120,133 @@
         display: none;
     }
 }
+
+/* About Hero Section (introduce.html) */
+.about-hero {
+    padding-top: 60px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.about-decor {
+    position: absolute;
+    z-index: 0;
+    top: -24px;
+}
+
+.about-hero-images {
+    position: relative;
+    height: 500px;
+}
+
+.about-img-wrap-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    z-index: 2;
+}
+
+.about-img-wrap-2 {
+    position: absolute;
+    top: 0;
+    left: 280px;
+    width: 240px;
+    z-index: 1;
+}
+
+.about-stats-box {
+    margin-top: 30px;
+    background-color: #074faa;
+    padding: 24px;
+    border-radius: 0 50px 0 50px;
+    color: white;
+    text-align: center;
+}
+
+.stats-box-number {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.stats-box-text {
+    font-size: 16px;
+    margin: 0;
+}
+
+.about-hero-content{
+    position: relative;
+    top: -44px;
+    padding-left: 40px;
+}
+
+.about-tagline {
+    font-size: 20px;
+    color: #ff9500;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #013475;
+    margin-bottom: 20px;
+}
+
+.about-divider {
+    width: 140px;
+    height: 2px;
+    background-color: #ff9500;
+    margin-bottom: 28px;
+}
+
+.about-description {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1F1F1F;
+    margin-bottom: 22px;
+    font-weight: 400;
+}
+
+.about-description-highlight {
+    color: #FF9500;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.about-btn {
+    padding: 14px 32px;
+    border-radius: 8px;
+}
+
+/* Mobile adjustments for About Hero */
+@media (max-width: 991px) {
+    .about-hero {
+        padding: 60px 0;
+        text-align: center;
+    }
+    .about-hero-images {
+        height: auto;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-img-wrap-1, .about-img-wrap-2 {
+        position: static;
+        width: 100%;
+        max-width: 350px;
+    }
+    .about-divider {
+        margin: 0 auto 30px auto;
+    }
+    .about-hero-content {
+        padding-left: 0;
+    }
+}
