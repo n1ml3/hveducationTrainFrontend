@@ -47,7 +47,7 @@
     font-weight: 600;
 }
 
-/* Đường kẻ dọc ngăn cách — gradient mờ dần ở hai đầu */
+/* Đường kẻ dọc ngăn cách */
 .stat-divider {
     width: 1px;
     height: 218px;
@@ -56,11 +56,17 @@
 
 /* Responsive */
 @media (max-width: 575.98px) {
+    .stat-item {
+        flex: 0 0 100%;
+        padding: 20px 16px;
+    }
+
     .stat-number {
         font-size: 28px;
     }
 
     .stat-label {
         font-size: 16px;
+        white-space: normal;
     }
 }
