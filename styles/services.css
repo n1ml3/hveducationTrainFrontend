@@ -193,6 +193,16 @@
 }
 /* === Responsive === */
 
+@media (max-width: 1439px){
+    .ellipse4, .checkeredshape, .ellipse2, .rectangle3{
+        display: none;
+    }
+
+    .services_course{
+        padding-top: 30px !important;
+    }
+}
+
 /* Tablet — 2 cột */
 @media (max-width: 991px) {
     .services {
