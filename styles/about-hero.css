@@ -129,10 +129,31 @@
     }
     .about-img-wrap-1 {
         width: 180px;
+        height: 100%;
+    }
+    .about-img-wrap-1 img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
     }
     .about-img-wrap-2 {
         left: 200px;
-        width: 160px;
+        width: 180px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-img-wrap-2 img {
+        height: 280px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+    .about-stats-box {
+        margin-top: 10px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .about-hero-content {
         padding-left: 20px;
@@ -151,62 +172,186 @@
 @media (max-width: 991px) {
     .about-hero {
         padding: 40px 0;
-        text-align: center;
+    }
+    .about-hero .row {
+        display: flex;
+        flex-direction: row; /* Giữ layout ngang như desktop */
+        align-items: center;
+    }
+    .about-hero .col-lg-5 {
+        width: 45%;
+    }
+    .about-hero .col-lg-7 {
+        width: 55%;
     }
     .about-hero-images {
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
+        height: 320px; /* Giảm chiều cao khung cho tablet */
     }
-    .about-img-wrap-1, .about-img-wrap-2 {
-        position: static;
-        width: 42%;
-        max-width: 180px;
+    .about-img-wrap-1 {
+        width: 150px;
+        height: 100%;
+        position: absolute; /* Quay lại absolute để chồng ảnh */
+        left: 0;
+        top: 0;
+    }
+    .about-img-wrap-1 img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .about-img-wrap-2 {
+        position: absolute;
+        left: 160px;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-img-wrap-2 img {
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .about-stats-box {
+        margin-top: 8px;
+        flex: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .stats-box-number {
+        font-size: 24px;
+    }
+    .about-hero-content {
+        top: 0;
+    }
+    .about-title {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    .about-divider {
+        margin-bottom: 20px;
+    }
+    .about-description, .about-description-highlight {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* 3. Cho màn hình Điện thoại (dưới 576px) */
+@media (max-width: 576px) {
+    .about-hero {
+        padding: 40px 0;
+        text-align: center;
+    }
+    .about-hero .row {
+        flex-direction: column; /* Đảm bảo xếp chồng dọc */
+    }
+    .about-hero .col-lg-5, .about-hero .col-lg-7 {
+        width: 100%;
+    }
+    .about-hero-images {
+        height: 280px; /* Chiều cao khung nhỏ hơn cho mobile */
+        width: 280px;  /* Cố định chiều rộng để căn giữa cụm absolute */
+        margin: 0 auto 40px auto; /* Căn giữa cụm ảnh */
+        position: relative; /* Giữ relative để con dùng absolute */
+        display: block;
+    }
+    .about-img-wrap-1 {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 150px;
+        height: 100%; /* Đặt cao bằng khối cha */
+        z-index: 2;
+    }
+    .about-img-wrap-1 img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .about-img-wrap-2 {
+        position: absolute;
+        top: 20px;
+        left: 140px;
+        width: 140px;
+        height: 100%; /* Đặt cao bằng khối cha */
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .about-img-wrap-2 img {
+        height: 180px; /* Giảm nhẹ chiều cao ảnh 2 */
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .about-stats-box {
+        margin-top: 5px;
+        padding: 8px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 30px 0 30px;
+    }
+    .stats-box-number {
+        font-size: 22px;
+    }
+    .stats-box-text {
+        font-size: 12px;
     }
     .about-hero-content {
         padding-left: 0;
         top: 0;
     }
     .about-divider {
-        margin: 0 auto 28px auto; /* Căn giữa gạch cam */
-    }
-    .about-title {
-        font-size: 28px;
-    }
-    .about-stats-box {
-        margin-top: 15px;
-        padding: 15px;
-    }
-    .stats-box-number {
-        font-size: 28px;
-    }
-}
-
-/* 3. Cho màn hình Điện thoại (dưới 576px) */
-@media (max-width: 576px) {
-    .about-hero-images {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .about-img-wrap-1, .about-img-wrap-2 {
-        width: 100%;
-        max-width: 240px;
+        margin: 0 auto 20px auto;
     }
     .about-title {
         font-size: 24px;
-    }
-    .about-tagline {
-        font-size: 18px;
     }
     .about-description, .about-description-highlight {
         font-size: 15px;
     }
     .about-btn {
-        width: 100%; /* Nút bấm rộng hết cỡ cho mobile */
+        width: 100%;
         justify-content: center;
+    }
+}
+
+/* 4. Cho màn hình Điện thoại nhỏ (320px) */
+@media (max-width: 375px) {
+    .about-hero-images {
+        width: 260px; /* Thu nhỏ khung tổng thể */
+        height: 260px;
+        margin-bottom: 30px;
+    }
+    .about-img-wrap-1 {
+        width: 120px; /* Thu nhỏ hơn nữa theo yêu cầu */
+        left: 10px;
+    }
+    .about-img-wrap-2 {
+        width: 120px;
+        left: 140px;
+    }
+    .about-img-wrap-2 img {
+        height: 160px;
+    }
+    .about-stats-box {
+        padding: 6px;
+    }
+    .stats-box-number {
+        font-size: 20px;
+    }
+    .stats-box-text {
+        font-size: 11px;
+    }
+    .about-title {
+        font-size: 22px;
+    }
+    .about-description, .about-description-highlight {
+        font-size: 14px;
     }
 }
