@@ -182,9 +182,26 @@
 
 /* Responsive */
 @media (max-width: 991px) {
+    .testimonials-title {
+        font-size: 32px;
+        width: 100%;
+    }
+
+    .testimonials-desc {
+        margin-bottom: 20px;
+    }
+
+    .testimonials {
+        padding: 40px 0;
+    }
+
+    .testimonials-decor, .testimonials-decor2 {
+        display: none;
+    }
+
     .testimonials-container {
         flex-direction: column;
-        gap: 60px;
+        gap: 20px;
     }
 
     .testimonials-content {
@@ -209,5 +226,18 @@
 @media (max-width: 767px) {
     .testimonials-cards {
         flex-direction: column;
+    }
+
+    .testimonials-title {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .testimonials-desc {
+        margin-bottom: 20px;
+    }
+
+    .testimonials-tagline {
+        font-size: 16px;
     }
 }
