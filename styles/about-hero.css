@@ -171,7 +171,7 @@
 /* 2. Cho màn hình Máy tính bảng (dưới 991px) */
 @media (max-width: 991px) {
     .about-hero {
-        padding: 40px 0;
+        padding: 40px;
     }
     .about-hero .row {
         display: flex;
