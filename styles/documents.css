@@ -110,8 +110,16 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .documents {
+        padding: 34px;
+    }
+
     .documents-header {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
+    }
+
+    .documents-grid {
+        margin-top: 0px;
     }
 
     .documents-title {
