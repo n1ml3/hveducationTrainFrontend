@@ -86,7 +86,7 @@
     .vision-card {
         max-width: calc(50% - 15px);
         height: auto;
-        min-height: 350px;
+        min-height: auto;
         padding: 30px 20px;
     }
     .ellipse5, .checkeredshape-2 {
@@ -103,7 +103,7 @@
 @media (max-width: 991px) {
     .vision-card {
         max-width: 100%;
-        height: auto;
+        min-height: auto;
     }
     .vision-mission-grid {
         gap: 20px;
