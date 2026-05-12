@@ -215,7 +215,60 @@
 }
 
 @media (max-width: 991px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Chuyển sang 1 cột: Text ở trên, Form ở dưới */
+        gap: 40px;
+    }
+
+    .contact-left, .contact-right {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều ngang */
+    }
+
+    .contact-info-item {
+        font-size: 14px;
+        align-items: flex-start;
+    }
+
+    .contact-info-item p {
+        margin: 0;
+        word-break: break-word;
+    }
+
     .contact-form-row {
         flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form {
+        gap: 12px;
+    }
+
+    .contact-input,
+    .contact-select {
+        height: 48px;
+    }
+
+    .contact-textarea {
+        height: 100px;
+        padding: 12px 15px;
+    }
+
+    .contact-btn {
+        height: 48px;
+    }
+
+    .contact-title {
+        font-size: 22px;
+    }
+
+    .contact-desc {
+        font-size: 13px;
+        margin-bottom: 20px;
     }
 }
