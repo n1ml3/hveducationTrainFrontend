@@ -107,7 +107,15 @@
 /* Responsive breakpoints */
 @media (max-width: 991px) {
     .documents-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .documents-header {
+        margin-bottom: 32px;
+    }
+
+    .documents-title {
+        font-size: 32px;
     }
 }
 

@@ -23,7 +23,7 @@
 .course-card {
   flex: 0 0 calc(25% - 18px);
   min-width: 300px;
-  height: 489px;
+  height: auto;
   scroll-snap-align: start;
   border-radius: 10px;
 }
@@ -175,6 +175,10 @@
     min-width: 260px;
   }
 
+  .course-cta {
+    margin-top: 24px;
+  }
+
   .course-meta {
     gap: 90px;
   }
@@ -189,6 +193,10 @@
 
   .course-meta {
     gap: 70px;
+  }
+
+  .course-cta {
+    margin-top: 24px;
   }
 
   .course-price-new {
@@ -209,5 +217,9 @@
 @media (max-width: 320px) {
   .course-meta {
     gap: 10px;
+  }
+
+  .course-price-badge {
+    left: 100px;
   }
 }
