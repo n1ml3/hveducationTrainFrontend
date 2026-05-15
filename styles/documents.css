@@ -139,6 +139,43 @@
         margin-right: auto;
     }
     .documents-title {
-        font-size: 32px;
+        font-size: 28px;
+    }
+}
+
+/* Mobile L, M, S: Horizontal scroll */
+@media (max-width: 575px) {
+    .documents-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 0 20px 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        max-width: none;
+    }
+
+    .documents-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .document-card {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+        max-width: none;
+    }
+
+    .documents-grid .document-card:first-child {
+        margin-left: 0;
+    }
+
+    .documents-title {
+        font-size: 24px;
     }
 }
