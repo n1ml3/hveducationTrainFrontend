@@ -174,13 +174,20 @@
 }
 
 @media (max-width: 767px) {
+  .info-section {
+    padding: 30px 20px;
+  }
+
   .info-grid {
     grid-template-columns: 1fr; /* Mobile thật sự nên để 1 cột */
     gap: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .info-title {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .info-card-body {
@@ -189,5 +196,38 @@
 
   .info-card-title {
     font-size: 18px;
+  }
+}
+
+/* Mobile L, M, S: Horizontal scroll */
+@media (max-width: 575px) {
+  .info-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 0 20px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    max-width: none;
+  }
+
+  .info-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .info-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    max-width: none;
+  }
+
+  .info-title {
+    font-size: 24px;
   }
 }
