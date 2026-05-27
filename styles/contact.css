@@ -186,6 +186,11 @@
     transition: 0.3s ease;
     border: none;
     cursor: pointer;
+    transform-origin: left;
+}
+
+.contact-btn:hover {
+    transform: scale(1.1);
 }
 
 .contact-btn-primary {
